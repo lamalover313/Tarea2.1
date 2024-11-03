@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: ProfileScreen(),
     );
   }
@@ -34,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
             const CircleAvatar(
               radius: 50,
               backgroundImage: NetworkImage(
-                  'https://via.placeholder.com/150'), // Sustituye con tu URL de imagen
+                  'https://img.freepik.com/psd-premium/ilustracion-3d-mujer-asiatica-sonriente-retrato-cerca-dibujos-animados-mujer-asiatica-pie-sobre-fondo-rosa-avatar-3d-ui-ux_1020-5071.jpg'), 
             ),
             const SizedBox(height: 10),
             const Text(
@@ -98,12 +97,9 @@ class ProfileScreen extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
             const Divider(),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Colors.red),
-              title: const Text('Logout', style: TextStyle(color: Colors.red)),
-              onTap: () {
-                // Acción de cierre de sesión
-              },
+            const ListTile(
+              leading: Icon(Icons.logout, color: Colors.red),
+              title: Text('Logout', style: TextStyle(color: Colors.red))
             ),
           ],
         ),
